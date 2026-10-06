@@ -1,15 +1,23 @@
+
 {
   "expo": {
     "name": "StepFlowApp",
     "slug": "StepFlowApp",
     "version": "1.0.0",
+    "scheme": "stepflowapp",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+
     "ios": {
       "supportsTablet": true
     },
+
     "android": {
+      "package": "com.yourname.stepflowapp",
+      "permissions": [
+        "android.permission.ACTIVITY_RECOGNITION"
+      ],
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/android-icon-foreground.png",
@@ -17,8 +25,52 @@
         "monochromeImage": "./assets/android-icon-monochrome.png"
       }
     },
+
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+
+    "plugins": [
+      "expo-font",
+
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#EFEEEC",
+          "dark": {
+            "image": "./assets/splash-icon-dark.png",
+            "backgroundColor": "#0E0E10"
+          }
+        }
+      ],
+
+      [
+        "react-native-vision-camera",
+        {
+          "cameraPermissionText": "StepFlow uses the camera to read your pulse when you cover the lens with your fingertip.",
+          "enableMicrophonePermission": false,
+          "enableCodeScanner": false
+        }
+      ],
+
+      "expo-sharing",
+      "expo-status-bar",
+      "./plugins/withStepService",
+
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "ndkVersion": "29.0.14206865",
+            "minSdkVersion": 26
+          }
+        }
+      ],
+
+      "./plugins/withNdkVersion"
+    ]
   }
+
 }

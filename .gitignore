@@ -17,6 +17,7 @@ expo-env.d.ts
 *.p12
 *.key
 *.mobileprovision
+*.keystore
 
 # Metro
 .metro-health-check*
@@ -31,6 +32,7 @@ yarn-error.*
 *.pem
 
 # local env files
+.env
 .env*.local
 
 # typescript
@@ -39,3 +41,17 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# Backups, logs, junk
+.native-backup-sdk51/
+%ProgramData%/
+*.log
+*.bak
+*.7z
+MEIL-Letterhead.docx
+
+# Firebase and secrets
+google-services.json
+GoogleService-Info.plist
+*adminsdk*.json
+*serviceAccount*.json

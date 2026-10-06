@@ -2,9 +2,14 @@
 
 A fitness step-tracking mobile app built with **React Native (Expo)**, featuring Google Sign-In, a Java backend for secure token verification, and a device-licensing system.
 
-<!-- Add screenshots or a demo GIF here. Example:
-![Home screen](docs/screenshots/home.png)
--->
+## Screenshots
+
+<p align="center">
+  <img src="docs/screenshots/home.png" width="220" />
+  <img src="docs/screenshots/stats.png" width="220" />
+  <img src="docs/screenshots/profile.png" width="220" />
+  <img src="docs/screenshots/dark-mode.png" width="220" />
+</p>
 
 ## Features
 
